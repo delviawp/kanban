@@ -4,8 +4,6 @@ const { User, Todo } = require('../models')
 const { comparePassword} = require('../helpers/bcrypt')
 const { signToken } = require('../helpers/jwt')
 const { OAuth2Client } = require('google-auth-library')
-const { sign } = require('jsonwebtoken')
-const { ne } = require('sequelize/types/lib/operators')
 
 class Controller {
     static async register(req,res, next) {

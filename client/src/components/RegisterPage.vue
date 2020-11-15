@@ -17,7 +17,7 @@
                     </div>
                     <button class="btn btn-primary">Sign Up</button>
                     <p role="button"
-                    @click.prevent="$emit('changePage', 'login-page')"
+                    @click.prevent="$emit('changePage','login-page')"
                     >Have an account?</p>
                 </form>
             </div>

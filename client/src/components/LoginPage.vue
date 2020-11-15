@@ -21,6 +21,7 @@
             @click.prevent="$emit('changePage','register-page')"
           >Don't have any account yet?</p>
         </form>
+        <button v-google-signin-button="clientId" class="google-signin-button"> Continue with Google</button>
       </div>
     </div>
   </div>
@@ -32,7 +33,8 @@ export default {
   data() {
     return {
       email: "",
-      password: ""
+      password: "",
+      clientId : '645674868541-6vv79eleg938e6i99t9idd1vpr0r3flj.apps.googleusercontent.com'
     };
   },
   methods: {
@@ -43,10 +45,26 @@ export default {
       };
       //console.log(payload)
       this.$emit("login", payload);
+    },
+    OnGoogleAuthSuccess (idToken) {
+      console.log(idToken, 'ini token')
+      // Receive the idToken and make your magic with the backend
+    },
+    OnGoogleAuthFail (error) {
+      console.log(error, 'ini eror')
     }
   }
 };
 </script>
 
 <style>
+.google-signin-button {
+  color: white;
+  background-color: red;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 20px 25px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 </style>
