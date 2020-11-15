@@ -118,9 +118,9 @@ Response:
       "updatedAt": "2020-04-17T05:45:10.669Z",
       "User": {
           "id": 1,
-          "fullname": "Yohan Nugraha",
+          "fullname": "Delvia Putri",
           "organization": "Hacktiv8",
-          "email": "mail@yohan.com"
+          "email": "d@mail.com"
       }
   },{
     ...
