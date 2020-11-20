@@ -42,7 +42,15 @@ Response:
   "email": "string"
 }
 ```
- 
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
+
 ### POST /login
  
 Request:
@@ -67,6 +75,14 @@ Response:
   "access_token": "string"
 }
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
  
 ### POST /tasks
 Request:
@@ -77,7 +93,7 @@ Request:
  
 ```json
 {
-  "title": "Creat REST API",
+  "title": "Create REST API",
   "category": "todo"
  
 }
@@ -95,14 +111,22 @@ Request:
   "UserId": "integer",
   "title": "Creat REST API",
   "category": "todo",
-  "createdAt": "2020-19-17T05:45:10.669Z",
-  "updatedAt": "2020-19-17T05:45:10.669Z"
+  "createdAt": "2020-11-15T05:45:10.669Z",
+  "updatedAt": "2020-11-15T05:45:10.669Z"
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
 ### GET /tasks
 Description: Get all current tasks in loggedin user organization 
 Request:
 - headers:
-  - access_token: string
+- access_token: string
 Response:
 - status: 200
 - body:
@@ -114,12 +138,11 @@ Response:
       "name": "Create REST API",
       "category": "todo",
       "UserId": 1,
-      "createdAt": "2020-04-17T05:45:10.669Z",
-      "updatedAt": "2020-04-17T05:45:10.669Z",
+      "createdAt": "2020-11-15T05:45:10.669Z",
+      "updatedAt": "2020-11-15T05:45:10.669Z",
       "User": {
           "id": 1,
           "fullname": "Delvia Putri",
-          "organization": "Hacktiv8",
           "email": "d@mail.com"
       }
   },{
@@ -127,6 +150,14 @@ Response:
   }
 ]
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
 ### GET /tasks/:id
 description: 
   Get one of the current logged in user task. (cannot get another user task)
@@ -147,6 +178,14 @@ Response:
     "updatedAt": "2020-06-19T20:48:41.811Z"
 }
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
 ### PUT /tasks/:id
 description: 
   Update one of the current logged in user task. (cannot update another user task)
@@ -171,10 +210,18 @@ Response:
     "title": "Create REST API using express",
     "category": "done",
     "UserId": 1,
-    "createdAt": "2020-06-19T13:09:06.917Z",
-    "updatedAt": "2020-06-19T20:48:41.811Z"
+    "createdAt": "2020-11-19T13:09:06.917Z",
+    "updatedAt": "2020-11-19T20:48:41.811Z"
 }
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
 ### DELETE /tasks/:id
 description: 
   Delete one of the current logged in user task. (cannot delete another user task)
@@ -190,3 +237,11 @@ Response:
     "message": "todo has been deleted"
 }
 ```
+
+Response: 
+- status 400
+``` 
+{
+  msg: bad request
+}
+``` 
